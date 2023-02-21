@@ -83,7 +83,7 @@ const FetchExample = () => {
             <p>Name:{selectedUser.first_name}</p>
             <p>Last Name:{selectedUser.last_name}</p>
             <p>Email:{selectedUser.email}</p>
-            <img src={selectedUser.avatar} style={{height:'50px', width:'50px'}}></img>
+            <img alt="avatar" src={selectedUser.avatar} style={{height:'50px', width:'50px'}}></img>
           </div>
         )}
       </div>
