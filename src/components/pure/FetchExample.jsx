@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
-import {getAllPagedUser,getAllUser,getUsersDetails,} from "../../services/fetchService";
+import {
+  getAllPagedUser,
+  getAllUser,
+  getUsersDetails,
+} from "../../services/fetchService";
 
 const FetchExample = () => {
   const [users, setUsers] = useState([]);
-  const [selectedUser, setselectedUser] = useState({});
+  const [selectedUser, setselectedUser] = useState(null);
   const [totalUsers, settotalUsers] = useState(12);
   const [UsersPerPage, setUsersPerPage] = useState(6);
   const [pages, setPages] = useState(2);
@@ -77,14 +81,20 @@ const FetchExample = () => {
       <button onClick={() => obtainPagedUsers(1)}>1</button>
       <button onClick={() => obtainPagedUsers(2)}>2</button>
       <div>
-        <h3>User Detail</h3>
-        {selectedUser && (
+        {selectedUser != null ? (
           <div>
+            <h3>User Details</h3>
             <p>Name:{selectedUser.first_name}</p>
             <p>Last Name:{selectedUser.last_name}</p>
             <p>Email:{selectedUser.email}</p>
-            <img alt="avatar" src={selectedUser.avatar} style={{height:'50px', width:'50px'}}></img>
+            <img
+              alt="avatar"
+              src={selectedUser.avatar}
+              style={{ height: "150px", width: "150px" }}
+            />
           </div>
+        ) : (
+          <h6>Please click on a User to see its details</h6>
         )}
       </div>
     </div>
