@@ -3,6 +3,7 @@ import {
   getAllPagedUser,
   getAllUser,
   getUsersDetails,
+  login
 } from "../../services/fetchService";
 
 const FetchExample = () => {
@@ -67,8 +68,26 @@ const FetchExample = () => {
       });
   };
 
+  const authUser = () => {
+    login('eve.holt@reqres.in', 'cityslicka')
+      .then((response) => {
+        console.log('TOKEN', response.token)
+        sessionStorage.setItem('token', response.token)
+      })
+      .catch((error) => {
+        alert(`Error while login user: ${error}`);
+      })
+      .finally(() => {
+        console.log("Ended login use");
+        console.table(selectedUser);
+      })
+  }
+
   return (
     <div>
+
+      <button onClick={authUser}>Auth User</button>
+
       <h2>Users:</h2>
       {users.map((user, index) => (
         <p key={index} onClick={() => obtainUsersDetails(user.id)}>
