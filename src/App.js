@@ -1,6 +1,7 @@
 //import logo from './logo.svg';
 import './App.css';
-import FetchExample from './components/pure/FetchExample';
+import AxiosExample from './components/pure/AxiosExample';
+// import FetchExample from './components/pure/FetchExample';
 // import AsyncExample from './components/pure/AsyncExample';
 // import ObservableExample from './components/pure/ObservableExample';
 // import RegisterFormik from './components/pure/forms/registerFormik';
@@ -55,7 +56,8 @@ function App() {
       {/* Ejemplo de procesos asincronos */}
       {/* <AsyncExample></AsyncExample> */}
       {/* <ObservableExample></ObservableExample> */}
-      <FetchExample></FetchExample>
+      {/* <FetchExample></FetchExample> */}
+      <AxiosExample></AxiosExample>
     </div>
   );
 }
