@@ -16,6 +16,15 @@ export const getUsersDetails = async (id) => {
   return response.json();
 };
 
+/**
+ * It's a function that takes two parameters, email and password, and returns a promise that resolves
+ * to the response of a POST request to the URL https://reqres.in/api/login with the body of the
+ * request being a JSON object with the email and password properties set to the values of the email
+ * and password parameters.
+ * @param email - email address of the user
+ * @param password - "cityslicka"
+ * @returns The response object.
+ */
 export const login = async (email, password) => {
   let body = {
     email:email,
