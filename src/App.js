@@ -1,6 +1,7 @@
 //import logo from './logo.svg';
 import './App.css';
-import AxiosExample from './components/pure/AxiosExample';
+import AxiosCRUDExample from './components/pure/AxiosCRUDExample';
+// import AxiosExample from './components/pure/AxiosExample';
 // import FetchExample from './components/pure/FetchExample';
 // import AsyncExample from './components/pure/AsyncExample';
 // import ObservableExample from './components/pure/ObservableExample';
@@ -57,7 +58,8 @@ function App() {
       {/* <AsyncExample></AsyncExample> */}
       {/* <ObservableExample></ObservableExample> */}
       {/* <FetchExample></FetchExample> */}
-      <AxiosExample></AxiosExample>
+      {/* <AxiosExample></AxiosExample> */}
+      <AxiosCRUDExample></AxiosCRUDExample>
     </div>
   );
 }
